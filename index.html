@@ -1,519 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+      scroll-behavior: smooth;
+      color: #111;
+      background: #111;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.85);
+      color: white;
+      padding: 15px 0;
+      z-index: 1000;
+      border-bottom: 2px solid #990000;
+      backdrop-filter: blur(6px);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    nav a:hover {
+      opacity: 0.6;
+    }
 
-    <title>Luis Villafane's Musical Portfolio</title>
-<!--
-Reflux Template
-https://templatemo.com/tm-531-reflux
--->
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    /* Hero section */
+    #hero {
+      background: linear-gradient(to bottom, #1a0000, #330000);
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 140px;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+      color: #fff;
+    }
+    #hero h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    #hero p {
+      margin-top: 8px;
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+    #hero .photo-placeholder {
+      width: 250px;
+      height: 250px;
+      background: #bbb;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      overflow: hidden;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    #hero .photo-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css" />
-    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
-    <link rel="stylesheet" href="assets/css/owl.css" />
-    <link rel="stylesheet" href="assets/css/lightbox.css" />
-  </head>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-  <body>
-    <div id="page-wraper">
-      <!-- Sidebar Menu -->
-      <div class="responsive-nav">
-        <i class="fa fa-bars" id="menu-toggle"></i>
-        <div id="menu" class="menu">
-          <i class="fa fa-times" id="menu-close"></i>
-          <div class="container">
-            <div class="image">
-              <a href="#"><img src="assets/images/author-image.jpg" alt="" /></a>
-            </div>
-            <div class="author-content">
-              <h4>Luis Villafane</h4>
-              <span>Double Bass/Bass Guitar</span>
-            </div>
-            <nav class="main-nav" role="navigation">
-              <ul class="main-menu">
-                 <li><a href="#section1">About Me</a></li>
-                 <li><a href="#section2">Available Services</a></li>
-                 <li><a href="#section3">Performance Samples</a></li>
-                 <li><a href="#section4">Contact Me/Booking Inquiries</a></li>
-              </ul>
-            </nav>
-            <div class="social-network">
-              <ul class="soial-icons">
-                 
-                  <a href="https://fb.com/templatemo"
-                    ><i class="fa fa-facebook"></i
-                  ></a>
-                </li>
-                 
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                </li>
-                 
-                  <a href="#"><i class="fa fa-linkedin"></i></a>
-                </li>
-                 
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
-                </li>
-                 
-                  <a href="#"><i class="fa fa-rss"></i></a>
-                </li>
-              </ul>
-            </div>
-            <div class="copyright-text">
-              <p>Copyright 2019 Reflux Design</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    section {
+      min-height: 100vh;
+      padding: 120px 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      animation: fadeIn 0.8s ease-in-out;
+    }
 
-      <section class="section about-me" data-section="section1">
-        <div class="container">
-          <div class="section-heading">
-            <h2>About Me</h2>
-            <div class="line-dec"></div>
-            <span
-              >I am a bassist from Reading, PA. A graduate of Penn State University with degrees in English, Music Performance, and Music Studies,
-              I have extensive experience Performance various genres of music.</span
-            >
-          </div>
-          <div class="left-image-post">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="left-image">
-                  <img src="assets/images/left-image.png" alt="" />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="right-text">
-             
-                <h3>My Experience</h3>
-                  <p>
-                    I have performed in a range of formal and informal settings. Currently, I do a considerable amount of freelance playing.<br><br> 
-                    My playing experience includes, but is not limited to:<br>
-                      
-                       Berks Sinfonietta (Principal), The Reading Pops Orchestra (Principal), Genesius Theater, Penn State Philharmonic, Allegro Orchestra, Pennsylvania Philharmonic, Lehigh Valley Chamber Orchestra, Penn State Chamber Orchestra, Penn State School of Theater Bassist,
-                        Berks Opera Workshop, Reading Choral Society, Central Pennsylvania Symphony, 
-                        bass instruction at Berks Summer Strings Instute and Reading Symphony Junior Strings Orchestra.<br><br>
-                        Musical theater shows that I have performed included, but are not limited to: Kinky Boots, Raisin the Musical, Les Mis, School of Rock, The Little Mermaid, 
-                        The Rocky Horror Picture Show, and the World Premiere of Broadway writer, Bill Russell's, Has Anyone Seen My Mind.</p>
-                   </p>
-                  <!-- <div class="white-button">
-                    <a href="#">Read More</a> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="right-image-post">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="left-text">
-                  <h3>My Education</h3>
-                  <p>I studied under Robert Nairn during my studies at Penn State University and earned degrees in Double Bass Performance as well as Music Studies.
-                    <br>
-                    <br>
-                    As a student, I had the opportunity to meet and learn from many bassists including, but not limited to, Kurt Muroki, 
-                    Chi-chi Nwanoku, Barry Green, Andreas Bennetzen, Robert Oppelt, and Tim Dunin. 
-                    <br>
-                    <br>
-                  Final Words: I am also a lifelong student. I always look to learn new tricks in the hopes of adding them to my arsenal. 
-                  Fun fact, with some assistance from Reflux Design, I designed this web portfolio myself in Visual Studio Code. <br> <br>
-                  I am also the fortunate winner of the 2025 International Society of Bassists Build-a-Bass sweepstakes. As such, I am the proud owner of a one-of-a-kind, world class instrument that has been built by a team of renowned luthiers, under the leadership of Paul Hart.
-                  </p>
-                  <div class="white-button">
-                    <a href="#"></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="right-image">
-                  <img src="assets/images/right-image.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    /* Backgrounds */
+    #experience { background: #1a1a1a; color:white; }
+    #education { background: #330000; color:white; }
+    #about { background: #0d0d0d; color:white; }
+    #contact { background: #660000; color:white; }
 
-      <section class="section my-services" data-section="section2">
-        <div class="container">
-          <div class="section-heading">
-            <h2>What I’m good at?</h2>
-            <div class="line-dec"></div>
-            <span
-              >Curabitur leo felis, rutrum vitae varius eu, malesuada a tortor.
-              Vestibulum congue leo et tellus aliquam, eu viverra nulla semper.
-              Nullam eu faucibus diam. Donec eget massa ante.</span
-            >
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="first-service-icon service-icon"></div>
-                <h4>HTML5 &amp; CSS3</h4>
-                <p>
-                  Phasellus non convallis dolor. Integer tempor hendrerit arcu
-                  at bibendum. Sed ac ante non metus vehicula congue quis eget
-                  eros.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="second-service-icon service-icon"></div>
-                <h4>Creative Ideas</h4>
-                <p>
-                  Proin lacus massa, eleifend sed fermentum in, dignissim vel
-                  metus. Nunc accumsan leo nec felis porttitor, ultricies
-                  faucibus purus mollis.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="third-service-icon service-icon"></div>
-                <h4>Easy Customize</h4>
-                <p>
-                  Integer suscipit condimentum aliquet. Nam quis risus metus.
-                  Nullam faucibus quam eget arcu pretium tincidunt. Nam libero
-                  dui.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="service-item">
-                <div class="fourth-service-icon service-icon"></div>
-                <h4>Admin Dashboard</h4>
-                <p>
-                  Vivamus et dui a massa venenatis fringilla. Proin lacus massa,
-                  eleifend sed fermentum in, dignissim vel metus. Nunc accumsan
-                  leo nec felis porttitor.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    form {
+      max-width: 400px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      width: 100%;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+    button {
+      padding: 12px;
+      background: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #333;
+    }
 
-      <section class="section my-work" data-section="section3">
-        <div class="container">
-          <div class="section-heading">
-            <h2>My Work</h2>
-            <div class="line-dec"></div>
-            <span
-              >Aenean sollicitudin ex mauris, lobortis lobortis diam euismod sit
-              amet. Duis ac elit vulputate, lobortis arcu quis, vehicula
-              mauris.</span
-            >
-          </div>
-          <div class="row">
-            <div class="isotope-wrapper">
-              <form class="isotope-toolbar">
-                <label
-                  ><input
-                    type="radio"
-                    data-type="*"
-                    checked=""
-                    name="isotope-filter"
-                  />
-                  <span>all</span></label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    data-type="people"
-                    name="isotope-filter"
-                  />
-                  <span>people</span></label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    data-type="nature"
-                    name="isotope-filter"
-                  />
-                  <span>nature</span></label
-                >
-                <label
-                  ><input
-                    type="radio"
-                    data-type="animals"
-                    name="isotope-filter"
-                  />
-                  <span>animals</span></label
-                >
-              </form>
-              <div class="isotope-box">
-                <div class="isotope-item" data-type="nature">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-01.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-01.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>First Title</h4>
-                      <span>free to use our template</span>
-                    </figcaption>
-                  </figure>
-                </div>
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.2s;
+    }
+    footer a:hover {
+      opacity: 0.6;
+    }
+    /* Mobile improvements */
+    @media (max-width: 600px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 0.95rem;
+      }
+      #hero h1 {
+        font-size: 1.8rem;
+      }
+      #hero p {
+        font-size: 1rem;
+      }
+      #hero .photo-placeholder {
+        width: 180px;
+        height: 180px;
+      }
+      section {
+        padding: 100px 15px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#experience">My Experience</a>
+      <a href="#education">My Education</a>
+      <a href="#about">About Me</a>
+      <a href="#contact">Contact Me</a>
+    </nav>
+  </header>
 
-                <div class="isotope-item" data-type="people">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-02.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-02.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Second Title</h4>
-                      <span>please tell your friends</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="animals">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-03.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-03.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Item Third</h4>
-                      <span>customize anything</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="people">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-04.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-04.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Item Fourth</h4>
-                      <span>Re-distribution not allowed</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="nature">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-05.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-05.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Fifth Awesome</h4>
-                      <span>Ut sollicitudin risus</span>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="isotope-item" data-type="animals">
-                  <figure class="snip1321">
-                    <img
-                      src="assets/images/portfolio-06.jpg"
-                      alt="sq-sample26"
-                    />
-                    <figcaption>
-                      <a
-                        href="assets/images/portfolio-06.jpg"
-                        data-lightbox="image-1"
-                        data-title="Caption"
-                        ><i class="fa fa-search"></i
-                      ></a>
-                      <h4>Awesome Sixth</h4>
-                      <span>Donec eget massa ante</span>
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section contact-me" data-section="section4">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Contact Me</h2>
-            <div class="line-dec"></div>
-            <span
-              >Fusce eget nibh nec justo interdum condimentum. Morbi justo ex,
-              efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit.</span
-            >
-          </div>
-          <div class="row">
-            <div class="right-content">
-              <div class="container">
-                <form id="contact" action="" method="post">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input
-                          name="name"
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          placeholder="Your name..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input
-                          name="email"
-                          type="text"
-                          class="form-control"
-                          id="email"
-                          placeholder="Your email..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <input
-                          name="subject"
-                          type="text"
-                          class="form-control"
-                          id="subject"
-                          placeholder="Subject..."
-                          required=""
-                        />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea
-                          name="message"
-                          rows="6"
-                          class="form-control"
-                          id="message"
-                          placeholder="Your message..."
-                          required=""
-                        ></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">
-                          Send Message
-                        </button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- Hero / Photo Section -->
+  <section id="hero">
+    <h1>Your Name</h1>
+    <p>Musician • Performer • Educator</p>
+    <div class="photo-placeholder">
+      <!-- Insert your photo later by replacing the div with <img src="yourphoto.jpg" /> -->
+      <strong>PHOTO HERE</strong>
     </div>
+  </section>
 
-    <!-- Scripts -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <section id="experience">
+    <h1>My Experience</h1>
+    <p>List your performance experience, ensembles, recordings, gigs, masterclasses, or related work here.</p>
+  </section>
 
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/lightbox.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script>
-      //according to loftblog tut
-      $(".main-menu li:first").addClass("active");
+  <!-- Video / Media Section -->
+  <section id="media" style="background:#eef7ff;">
+    <h1>Featured Video</h1>
+    <p>Showcase a performance, recording session, or highlight reel.</p>
 
-      var showSection = function showSection(section, isAnimate) {
-        var direction = section.replace(/#/, ""),
-          reqSection = $(".section").filter(
-            '[data-section="' + direction + '"]'
-          ),
-          reqSectionPos = reqSection.offset().top - 0;
+    <div style="width:100%; max-width:700px; aspect-ratio:16/9; background:#ccc; margin-top:20px; border-radius:10px; overflow:hidden;">
+      <!-- Replace the iframe src with your actual video link -->
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
 
-        if (isAnimate) {
-          $("body, html").animate(
-            {
-              scrollTop: reqSectionPos
-            },
-            800
-          );
-        } else {
-          $("body, html").scrollTop(reqSectionPos);
-        }
-      };
+  <section id="education"">
+    <h1>My Education</h1>
+    <p>Include your conservatory, university, teachers, private studies, and other training.</p>
+  </section>
 
-      var checkSection = function checkSection() {
-        $(".section").each(function() {
-          var $this = $(this),
-            topEdge = $this.offset().top - 80,
-            bottomEdge = topEdge + $this.height(),
-            wScroll = $(window).scrollTop();
-          if (topEdge < wScroll && bottomEdge > wScroll) {
-            var currentId = $this.data("section"),
-              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
-            reqLink
-              .closest("li")
-              .addClass("active")
-              .siblings()
-              .removeClass("active");
-          }
-        });
-      };
+  <section id="about">
+    <h1>About Me</h1>
+    <p>A short biography, mission statement, and artistic philosophy. Mention your instrument(s), style, and career highlights.</p>
+  </section>
 
-      $(".main-menu").on("click", "a", function(e) {
-        e.preventDefault();
-        showSection($(this).attr("href"), true);
-      });
+  <section id="contact">
+    <h1>Contact Me</h1>
+    <p>Fill out the form below to get in touch.</p>
 
-      $(window).scroll(function() {
-        checkSection();
-      });
-    </script>
-  </body>
+    <!-- Replace FORM_ACTION_HERE with email service endpoint -->
+    <form action="FORM_ACTION_HERE" method="POST">
+      <label for="first">First Name *</label>
+      <input type="text" id="first" name="first" required />
+
+      <label for="last">Last Name *</label>
+      <input type="text" id="last" name="last" required />
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <p><small>You can configure this form using FormSubmit, Netlify Forms, or a custom backend.</small></p>
+  </section>
+
+  <footer>
+    © 2025 Your Name — Musician • Performer • Educator
+    <br><br>
+    <a href="YOUR_INSTAGRAM_URL">Instagram</a>
+    <a href="YOUR_YOUTUBE_URL">YouTube</a>
+    <a href="YOUR_TIKTOK_URL">TikTok</a>
+    <a href="YOUR_SPOTIFY_URL">Spotify</a>
+  </footer>
+</body>
 </html>
