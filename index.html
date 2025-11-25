@@ -104,13 +104,20 @@
       justify-content: flex-start;
       animation: fadeIn 0.8s ease-in-out;
     }
+    
     .responsive-video {
   max-width: 100%;
   width: 100%;
   height: auto;
   display: block;
 }
-
+/* Desktop and larger tablets */
+@media (min-width: 768px) {
+  .responsive-video {
+    max-width: 700px;  /* choose your ideal desktop size */
+    margin: 0 auto;    /* centers the video */
+  }
+}
 
     /* Backgrounds */
     #experience { background: #1a1a1a; color:white; }
@@ -271,6 +278,7 @@ I am also the fortunate winner of the 2025 International Society of Bassists Bui
   </footer>
 </body>
 </html>
+
 
 
 
